@@ -1,0 +1,38 @@
+// Scala Sets - A set is collection in scala which contains no duplicate values.
+// Sets can be mutable or immutable, by default sets are immutable.
+
+object DataStructures2{
+  def main(args:Array[String]):Unit={
+    val set1=Set(1,2,3,4,5,6,7,8)
+    val set2= Set("Apple","Banana","Cherry","Grapes","Tomato","Oranges","Watermelon",
+    "Pineapple")
+    println(set1.contains(5))
+    println(set1.size)
+    println(set1+9)
+    
+    // Union of sets
+    val set3=Set("Grapes","Tomato","Guava","Oranges","Banana")
+    val fruitBasket=set2 union set3
+    println(fruitBasket)
+    
+    //Intersect : common values
+    val interSet=set2 intersect set3
+    
+    //Difference
+    val diffSet=set2 diff set3
+    println(diffSet)
+    
+    val diffSet1=set3 diff set2
+    println(diffSet1)
+    
+    //Subset check
+    println(set2.subsetOf(set3))
+    
+    // Transformation - map,filter,reduce
+    
+    println(set1.map(_*2))
+    println(set1.filter(_%2==0))
+    println(set1.reduce(_+_))
+    
+  }
+}
